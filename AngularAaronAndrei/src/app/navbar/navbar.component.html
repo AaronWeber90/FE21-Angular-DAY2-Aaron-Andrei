@@ -1,0 +1,20 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid p-5">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-info" routerLink="/">Home</button>
+        <button type="button" class="btn btn-info" routerLink="/contact">Contact</button>
+        <button type="button" class="btn btn-info">About</button>
+      </div>
+      <a class="btn btn-info" (click)="addDonataion()">Donate <i class="fas fa-donate"></i></a>
+      <ng-template [ngIf]="donationValue > 200" [ngIfElse]="none">
+        <p class="text-light">You donated € 200!</p>
+      </ng-template>
+      <ng-template #none>
+      </ng-template>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-info" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>

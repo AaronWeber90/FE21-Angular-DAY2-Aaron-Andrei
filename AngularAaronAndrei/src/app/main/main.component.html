@@ -1,0 +1,40 @@
+<div class="container-fluid main row p-5 justify-content-center">
+
+
+    <!-- <span>Brand: {{car.brand}}</span>
+        <span> Color: {{car.color}}</span> -->
+
+    <div class="col-md-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            
+                <tbody *ngFor="let car of cars" >
+                    <td>{{car.brand}}</td>
+                    <td>{{car.color}}</td>
+                </tbody>
+        </table>
+
+        <form [formGroup]="addCarForm" (ngSubmit)="submitCar()">
+            <label>Brand: </label>
+            <input formControlName="newCarBrand">
+            <label>Color: </label>
+            <input formControlName="newCarColor">
+            <input type="submit" value="Add car">
+          </form>
+        
+    </div>
+
+</div>
+
+
+<!-- <input id="" type="text" formControlName="newCarColor">
+<input type="submit" value="Add car"> -->
+
+
+
+
