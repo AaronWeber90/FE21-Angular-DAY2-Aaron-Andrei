@@ -12,7 +12,7 @@
                     <th>Color</th>
                 </tr>
             </thead>
-            
+
                 <tbody *ngFor="let car of cars" >
                     <td>{{car.brand}}</td>
                     <td>{{car.color}}</td>
@@ -21,9 +21,9 @@
 
         <form [formGroup]="addCarForm" (ngSubmit)="submitCar()">
             <label>Brand: </label>
-            <input formControlName="newCarBrand">
+            <input formControlName="brand">
             <label>Color: </label>
-            <input formControlName="newCarColor">
+            <input formControlName="color">
             <input type="submit" value="Add car">
           </form>
         

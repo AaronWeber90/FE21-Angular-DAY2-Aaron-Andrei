@@ -25,8 +25,8 @@ export class MainComponent implements OnInit {
   ];
   
 addCarForm = new FormGroup({
-  newCarBrand: new FormControl("", Validators.required),
-  newCarColor: new FormControl("", Validators.required),
+  brand: new FormControl("", Validators.required),
+  color: new FormControl("", Validators.required),
 });
 
 
